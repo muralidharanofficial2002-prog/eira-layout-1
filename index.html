@@ -26,136 +26,29 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <style id="eira-static-styles">
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      html { scroll-behavior: smooth; font-family: 'Montserrat', sans-serif; background: #F4F6F3; color: #252B2D; }
-      body { min-height: 100vh; overflow-x: hidden; background: #F4F6F3; color: #252B2D; }
-      .eira-serif { font-family: 'Lora', Georgia, serif; }
-      .eira-sans { font-family: 'Montserrat', sans-serif; }
-      .eira-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 1.35rem 3.5rem; color: #F4F6F3; background: linear-gradient(180deg, rgba(22,42,42,0.58) 0%, rgba(22,42,42,0) 100%); }
-      .eira-brand { font-family: 'Lora', serif; font-size: 1.5rem; letter-spacing: 0.28em; font-weight: 600; color: #F4F6F3; text-decoration: none; }
-      .eira-links { display: flex; gap: 2.25rem; align-items: center; list-style: none; }
-      .eira-links a, .eira-links button { color: rgba(244,246,243,0.88); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; background: none; border: none; cursor: pointer; font-family: inherit; }
-      .eira-cta { background: #80B8B4; color: #182728; padding: 0.7rem 1.4rem; border-radius: 999px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border: none; cursor: pointer; }
-      .eira-hero { position: relative; min-height: 100vh; width: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 7.5rem 4rem 2.75rem; color: #FFFFFF; overflow: hidden; background-color: #1A3A38; background-image: radial-gradient(ellipse 56% 52% at 45% 50%, rgba(128,184,180,0.05) 0%, rgba(72,132,128,0.34) 55%, rgba(24,56,54,0.88) 100%), linear-gradient(135deg, #1E4442 0%, #3E7B77 48%, #183635 100%); }
-      .eira-top-tag { display: flex; align-items: center; gap: 1rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; color: rgba(255,255,255,0.92); margin-top: 2rem; }
-      .eira-top-tag::before { content: ''; width: 90px; height: 1px; background: rgba(255,255,255,0.38); }
-      .eira-hero-main { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem; margin: auto 0; padding-left: 7rem; }
-      .eira-title-bold { display: block; font-size: clamp(4.2rem, 9.5vw, 8.2rem); font-weight: 800; line-height: 0.9; letter-spacing: -0.03em; color: #FFFFFF; }
-      .eira-title-thin { display: block; font-size: clamp(3.6rem, 8.2vw, 7rem); font-weight: 100; line-height: 0.96; letter-spacing: -0.02em; color: rgba(255,255,255,0.95); margin-top: -0.04em; }
-      .eira-subtitle { margin-top: 1.25rem; font-size: 0.92rem; font-weight: 300; color: rgba(255,255,255,0.9); }
-      .eira-stars { margin-top: 0.5rem; color: #FBBF24; letter-spacing: 0.25em; font-size: 0.75rem; }
-      .eira-book-btn { display: inline-flex; align-items: center; gap: 1rem; background: none; border: none; color: #FFFFFF; font-size: 1rem; font-weight: 600; cursor: pointer; font-family: inherit; }
-      .eira-book-circle { width: 2.5rem; height: 2.5rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.4); display: inline-flex; align-items: center; justify-content: center; }
-      .eira-price-wrap { padding-left: 52%; margin-bottom: 1.5rem; position: relative; }
-      .eira-pin { width: 2.25rem; height: 2.25rem; border-radius: 999px; background: linear-gradient(135deg, #FBBF24 0%, #F5931E 100%); color: #FFFFFF; font-weight: 700; font-size: 0.82rem; border: none; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 0 24px rgba(245,147,30,0.65); margin-bottom: 0.4rem; margin-left: 6.5rem; cursor: pointer; }
-      .eira-price { font-size: clamp(2.1rem, 3.8vw, 3.25rem); font-weight: 700; line-height: 1; letter-spacing: -0.02em; }
-      .eira-price-note { font-size: 0.72rem; color: rgba(255,255,255,0.8); margin-top: 0.3rem; }
-      .eira-bottom-bar { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.24); padding-bottom: 0.9rem; margin-left: 7rem; }
-      .eira-dates { display: flex; align-items: center; gap: 0.65rem; font-size: 0.92rem; font-weight: 600; }
-      .eira-tabs { display: flex; gap: 2.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.78); }
-      .eira-tabs span:first-child { color: #FFFFFF; font-weight: 600; }
-      .eira-section { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; }
-      .eira-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.75rem; margin-top: 2.5rem; }
-      .eira-card { background: #FFFFFF; border: 1px solid #D7E4E1; border-radius: 1.25rem; padding: 1.75rem; }
-      .eira-card h3 { font-family: 'Lora', serif; font-size: 1.35rem; margin-bottom: 0.5rem; color: #252B2D; }
-      .eira-card p { font-size: 0.88rem; line-height: 1.6; color: rgba(37,43,45,0.78); }
-      .eira-card-rate { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #D7E4E1; display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
-      @media (max-width: 768px) {
-        .eira-nav { padding: 1rem 1.5rem; }
-        .eira-links { display: none; }
-        .eira-hero { padding: 6rem 1.5rem 2rem; }
-        .eira-hero-main, .eira-bottom-bar, .eira-price-wrap { padding-left: 0; margin-left: 0; }
+    <script type="importmap" id="eira-importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@19.0.0",
+          "react/jsx-runtime": "https://esm.sh/react@19.0.0/jsx-runtime",
+          "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+          "lucide-react": "https://esm.sh/lucide-react@0.475.0?deps=react@19.0.0"
+        }
       }
-    </style>
+    </script>
   </head>
   <body class="bg-[#F4F6F3] text-[#252B2D] antialiased selection:bg-[#80B8B4] selection:text-[#252B2D]">
     <div id="root"></div>
     <!-- EIRA_APP_ENTRY -->
     <script type="module" id="eira-static-loader">
       if (!document.querySelector('script[data-eira-vite="true"]')) {
-        const root = document.getElementById('root');
-        if (root && !root.innerHTML.trim()) {
-          root.innerHTML = `
-            <header class="eira-nav">
-              <a href="#top" class="eira-brand">EIRA</a>
-              <ul class="eira-links">
-                <li><a href="#stay">Stay</a></li>
-                <li><a href="#dine">Dine</a></li>
-                <li><a href="#experiences">Experiences</a></li>
-                <li><a href="#offers">Offers</a></li>
-              </ul>
-              <a href="#stay" class="eira-cta">Check Availability</a>
-            </header>
-            <main id="top">
-              <section class="eira-hero" aria-label="EIRA Coastal Sanctuary Full-Screen Hero">
-                <div class="eira-top-tag">Top sanctuary</div>
-                <div class="eira-hero-main">
-                  <div>
-                    <h1>
-                      <span class="eira-title-bold">Eira</span>
-                      <span class="eira-title-thin">luxury</span>
-                    </h1>
-                    <p class="eira-subtitle">Premium luxury sanctuary in <strong>Karwar Cove</strong></p>
-                    <div class="eira-stars" aria-label="Rated 5 out of 5 stars">★ ★ ★ ★ ★</div>
-                  </div>
-                  <a href="#stay" class="eira-book-btn" style="text-decoration:none">
-                    <span>Book now</span>
-                    <span class="eira-book-circle">›</span>
-                  </a>
-                </div>
-                <div class="eira-price-wrap">
-                  <button type="button" class="eira-pin" title="Sanctuary Tariff Details">i</button>
-                  <div class="eira-price">₹1,14,000</div>
-                  <div class="eira-price-note">Price on 3 nights</div>
-                </div>
-                <div class="eira-bottom-bar">
-                  <div>
-                    <div style="font-size:0.72rem;color:rgba(255,255,255,0.78);margin-bottom:0.2rem">Your searching</div>
-                    <div class="eira-dates">
-                      <span>20 nov</span>
-                      <span style="color:rgba(255,255,255,0.5)">›</span>
-                      <span>23 nov</span>
-                      <span style="color:#F5931E">📅</span>
-                    </div>
-                  </div>
-                  <div class="eira-tabs">
-                    <span>Overview</span>
-                    <span>Rooms</span>
-                    <span>Information</span>
-                    <span>Location</span>
-                  </div>
-                </div>
-              </section>
-              <section id="stay" class="eira-section">
-                <p style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:#4E8985;font-weight:600">Stay · Private Coastal Sanctuaries</p>
-                <h2 class="eira-serif" style="font-size:2.25rem;margin-top:0.5rem"><em>Villas</em> &amp; suites shaped by the sea breeze</h2>
-                <div class="eira-grid">
-                  <article class="eira-card">
-                    <h3>Lagoon Verandah Room</h3>
-                    <p>Sun-dappled lime-plaster interiors, a hand-carved Malabar teak king bed, and a louvered verandah opening toward the palm-lined estuary.</p>
-                    <div class="eira-card-rate"><span>46 m² · Up to 2 Guests</span><span>₹38,000 / night</span></div>
-                  </article>
-                  <article class="eira-card">
-                    <h3>Tidewater Pavilion</h3>
-                    <p>Contemporary coastal pavilion with floor-to-ceiling teak sliders, woven cane accents, and uninterrupted views of the rolling Arabian Sea.</p>
-                    <div class="eira-card-rate"><span>54 m² · Up to 2 Guests</span><span>₹46,000 / night</span></div>
-                  </article>
-                  <article class="eira-card">
-                    <h3>Konkan Dune Suite</h3>
-                    <p>Expansive living pavilion with a traditional teak jhoola swing daybed, private plunge pool, and sheer linen curtains billowing in the sea breeze.</p>
-                    <div class="eira-card-rate"><span>82 m² · Up to 4 Guests</span><span>₹68,000 / night</span></div>
-                  </article>
-                  <article class="eira-card">
-                    <h3>The Cliffside Haveli</h3>
-                    <p>Perched atop the laterite headland with dramatic 180-degree ocean vistas, a private infinity terrace, and dedicated butler service.</p>
-                    <div class="eira-card-rate"><span>118 m² · Up to 4 Guests</span><span>₹95,000 / night</span></div>
-                  </article>
-                </div>
-              </section>
-            </main>
-          `;
-        }
+        ['./public/bundle/eira-1.css', './public/bundle/eira-2.css'].forEach((href) => {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = href;
+          document.head.appendChild(link);
+        });
+        import('./public/bundle/main.js');
       }
     </script>
   </body>
